@@ -4,17 +4,15 @@ class pat
 public static void main(String args[])
  {
   Scanner sc=new Scanner(System.in);
-  int r,c,k;
+  int r,k=1;
   r=sc.nextInt();
-  k=r;
   for (int i=1; i<=r; i++) //rows
     {
-      for(int j=1;j<=r;j++)   //col
+      for(int j=1;j<=k;j++)   //col
       {
-        System.out.print(k+" ");
-        k--;
+        System.out.print(j);
       }
-      k=r;
+      k++;
       System.out.println();
     }
   }
