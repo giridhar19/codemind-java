@@ -1,19 +1,26 @@
 import java.util.*;
-class pat
+class sample
 {
-public static void main(String args[])
- {
-  Scanner sc=new Scanner(System.in);
-  int r,c,k=1;
-  r=sc.nextInt();
-  c=r;
-  for (int i=1; i<=r; i++) //rows
+    public static void main(String args[])
     {
-      for(int j=1;j<=c;j++)   //col
-      {
-        System.out.print((char)(64+i)+" "); 
-      }
-      System.out.println();
+        Scanner s=new Scanner(System.in);
+        int n=s.nextInt();
+        
+        for(int i=0;i<n;i++)
+        {
+              for(int j=0;j<n;j++)
+              {
+              if(i==j||j==n-i-1)
+              
+              System.out.print("x");
+              else
+                  System.out.print("0");
+              }
+              
+                   System.out.println();
+        }
+     
+        
+         
     }
-  }
 }
