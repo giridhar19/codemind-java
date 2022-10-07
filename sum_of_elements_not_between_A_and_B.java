@@ -1,22 +1,24 @@
 import java.util.*;
-class sol
+class code
 {
     public static void main(String args[])
     {
-        Scanner s=new Scanner(System.in);
-        int n=s.nextInt();
-        int arr[]=new int[n];
-        for(int i=0;i<n;i++)
-            arr[i]=s.nextInt();
-         int a=s.nextInt();
-         int b=s.nextInt();
-        int sum=0;
-        for(int i=0;i<n;i++)
+        Scanner sc=new Scanner(System.in);
+        int n,x[],i,a,b,sum=0;
+        n=sc.nextInt();
+        x=new int[n];
+        for (i=0;i<n;i++)
         {
-         if(arr[i]<a || arr[i]>b)
-         {
-            sum=sum+arr[i];
-         }
+            x[i]=sc.nextInt();
+        }
+        a=sc.nextInt();
+        b=sc.nextInt();
+        for (i=0;i<n;i++)
+        {
+          if (x[i]<a || x[i]>b)
+           {
+               sum=sum+x[i];
+           } 
         }
         System.out.print(sum);
     }
