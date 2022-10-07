@@ -1,25 +1,27 @@
 import java.util.*;
-class sol
+class code
 {
     public static void main(String args[])
     {
-        Scanner s=new Scanner(System.in);
-        int n=s.nextInt();
-        int arr[]=new int[n];
-        for(int i=0;i<n;i++)
-            arr[i]=s.nextInt();
-         int a=s.nextInt();
-         int b=s.nextInt();
-        int sum=0;
-        for(int i=0;i<n;i++)
+        Scanner sc=new Scanner(System.in);
+        int n,x[],i,a,b,sum=0;
+        n=sc.nextInt();
+        x=new int[n];
+        for (i=0;i<n;i++)
         {
-         if(arr[i]<a || arr[i]>b)
-         {
-            System.out.print(arr[i]+" ");
-            sum++;
-         }
+            x[i]=sc.nextInt();
         }
-        if(sum==0)
+        a=sc.nextInt();
+        b=sc.nextInt();
+        for (i=0;i<n;i++)
+        {
+          if (x[i]<a || x[i]>b)
+           {
+               System.out.print(x[i]+" ");
+               sum++;
+           } 
+        }
+        if (sum==0)
             System.out.print("-1");
     }
 }
