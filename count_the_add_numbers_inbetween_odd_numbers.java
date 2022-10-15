@@ -1,19 +1,21 @@
 import java.util.*;
-class sol
+class countevenbetweenevennumbers
 {
     public static void main(String args[])
     {
-        Scanner s=new Scanner(System.in);
-        int n=s.nextInt();
-        int a[]=new int[n];
-        for(int i=0;i<n;i++)
-            a[i]=s.nextInt();
-        int c=0;
-        for(int i=0,j=1,k=2;k<n;k++,j++,i++)
+        Scanner sc=new Scanner(System.in);
+        int n,x[],i,count=0;
+        n=sc.nextInt();
+        x=new int[n];
+        for(i=0;i<n;i++)
         {
-            if(a[i]%2!=0 && a[j]%2!=0 && a[k]%2!=0 )
-            c++;
+            x[i]=sc.nextInt();
         }
-        System.out.print(c);
+        for(i=1;i<n-1;i++)
+        {
+            if(x[i-1]%2!=0 && x[i]%2!=0 && x[i+1]%2!=0)
+             count++;
+        }
+        System.out.println(count);
     }
 }
