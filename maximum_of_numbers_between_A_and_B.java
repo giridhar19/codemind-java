@@ -1,31 +1,30 @@
 import java.util.*;
-class sol
+class maximumofnumbersnotbetweenAandB
 {
     public static void main(String args[])
     {
-        Scanner s=new Scanner(System.in);
-        int n=s.nextInt();
-        int arr[]=new int[n];
-        for(int i=0;i<n;i++)
-            arr[i]=s.nextInt();
-         int a=s.nextInt();
-         int b=s.nextInt();
-        int sum=0;
-        int max=0;
-        for(int i=0;i<n;i++)
-        {
-         if(arr[i]>=a&&arr[i]<=b)
-         {
-             if(max < (arr[i]))
-             {
-                max=arr[i];
-             }
-         }
-        }
-        if (max>0)
-            System.out.print(max);
-        else
-            System.out.print("-1");
-        
+        Scanner sc=new Scanner(System.in);
+        int n,x[],i,max,a,b,flag=0;
+        n=sc.nextInt();
+        x=new int[n];
+        for(i=0;i<n;i++)
+           x[i]=sc.nextInt();
+           a=sc.nextInt();
+           b=sc.nextInt();
+           max=x[0];
+           for(i=0;i<n;i++)
+           {
+              if(x[i]>=a && x[i]<=b)
+              {
+               if(x[i]>max)
+               max=x[i];
+               flag=1;
+               }
+           }
+        //   System.out.println(max);
+    if(flag==0)
+    System.out.println(-1);
+    else
+    System.out.println(max);
     }
 }
