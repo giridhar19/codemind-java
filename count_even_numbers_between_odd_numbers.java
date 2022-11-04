@@ -1,19 +1,19 @@
-import java.util.*;
-class sol
+import java.util.Scanner;
+class fibonacci
 {
-    public static void main(String args[])
-    {
-        Scanner s=new Scanner(System.in);
-        int n=s.nextInt();
-        int a[]=new int[n];
-        for(int i=0;i<n;i++)
-            a[i]=s.nextInt();
-        int c=0;
-        for(int i=0,j=1,k=2;k<n;k++,j++,i++)
-        {
-            if(a[i]%2!=0 && a[j]%2==0 && a[k]%2!=0 )
-            c++;
-        }
-        System.out.print(c);
-    }
+   public static void main(String args[])
+   {
+     Scanner sc=new Scanner(System.in);
+     int n=sc.nextInt();
+     int x[],co=0;
+     x=new int[n];
+     for (int i=0;i<n;i++)
+        x[i]=sc.nextInt();
+     for(int i=0;i<n-1;i++)
+     {
+         if (((x[i]%2)!=0)&&(x[i+1]%2==0)&&(x[i+2]%2!=0))
+            co++;
+     }
+     System.out.println(co);
+   }
 }
