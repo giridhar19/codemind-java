@@ -1,13 +1,13 @@
 import java.util.*;
-class Solution
+class intrest
 {
     public static void main(String args[])
     {
-        Scanner s=new Scanner(System.in);
-        int n=s.nextInt();
-        int m=s.nextInt();
-        int o=s.nextInt();
-        int max=((n*m*o)/100);
-        System.out.println(max);
+    Scanner sc=new Scanner (System.in);
+    int p=sc.nextInt();
+    int r=sc.nextInt();
+    int t=sc.nextInt();
+    int cal=(p*r*t)/100;
+    System.out.print(cal);
     }
 }
